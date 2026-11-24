@@ -25,5 +25,3 @@ data/etopo_*.npz
 !data/etopo_danakil.npz
 !data/etopo_assal.npz
 
-# Private notes and worldbuilding (not published)
-privat/

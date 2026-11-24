@@ -7,8 +7,14 @@ minst 3 personer. Då avgör testet vad som plockas fram.
 
 ## Parkerat
 
-### Berättelse
-- **Decennierapporter:** en historiker summerar spelarens arv vart tionde år.
+### Story (worldbuilding)
+- **The Habsburg–Qing family:** around 1900 an archduke marries a Qing princess. After both
+  empires have fallen, the family seeks legitimacy through great works instead of thrones.
+- **The family council:** the Builder, the Chemist, the Diplomat, the Financier and the Heir
+  of Yu ("dam or divert" – Gun versus Da Yu), who often disagree.
+- **Generations:** the game runs until 2300, and the legacy passes from one generation to
+  the next.
+- **Decade reports:** a historian sums up the family's legacy every ten years.
 
 ### Progression
 - **Fler scenarier:** introduktion med Harsprånget, Atlantropa, klimatkrisen.
