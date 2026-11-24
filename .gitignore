@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Saved games
+sparade/
+
+# Raw downloads (large)
+data/raa/
+
+# HydroRIVERS-derived river network: the HydroSHEDS license does not allow
+# redistribution as stand-alone data. Run `python hamta_floder.py` to create it.
+data/floder.npz
+
+# ETOPO1 tiles around individual dam sites are only used by an experimental
+# function; the sea and depression tiles below are what the game needs.
+data/etopo_*.npz
+!data/etopo_gibraltar.npz
+!data/etopo_rodahavet.npz
+!data/etopo_qattara.npz
+!data/etopo_dodahavet.npz
+!data/etopo_saharahavet.npz
+!data/etopo_danakil.npz
+!data/etopo_assal.npz

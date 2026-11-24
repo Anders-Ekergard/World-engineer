@@ -1,0 +1,6 @@
+dash>=2.16
+plotly>=5.18
+numpy>=1.26
+scipy>=1.11
+contourpy>=1.2
+pyshp>=2.3          # only needed for hamta_floder.py (building the river network)
