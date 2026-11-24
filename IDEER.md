@@ -8,12 +8,7 @@ minst 3 personer. Då avgör testet vad som plockas fram.
 ## Parkerat
 
 ### Berättelse
-- **Familjen Habsburg–Qing:** en ärkehertig gifter sig med en Qing-prinsessa kring 1900. Efter
-  att båda imperierna fallit söker familjen legitimitet genom verk i stället för troner.
-- **Familjerådet:** Konstruktören, Kemisten, Diplomaten, Finansiären och Yu-arvtagaren
-  ("dämma eller leda", Gun mot Da Yu), som tycker olika.
-- **Generationer:** spelet sträcker sig till 2300, och arvet går vidare.
-- **Decennierapporter:** en historiker summerar arvet vart tionde år.
+- **Decennierapporter:** en historiker summerar spelarens arv vart tionde år.
 
 ### Progression
 - **Fler scenarier:** introduktion med Harsprånget, Atlantropa, klimatkrisen.
