@@ -42,7 +42,7 @@ Qattara Depression canal without game rules.
 | `floder.py`, `natverk.py`, `kaskad.py` | Rivers, the river network and downstream (cascade) effects |
 | `bassanger.py`, `sankor.py`, `terrang.py` | Seas, depressions below sea level and terrain (box models) |
 | `kontroll.py`, `spel/kontroll_spel.py` | Checks of the models against real data and of the game engine |
-| `IDEER.md` | Design notes and the idea backlog (in Swedish) |
+| `IDEER.md` | Design notes, idea backlog and test protocol |
 
 Much of the code (names and comments) is in Swedish; the game itself is in English.
 
