@@ -1,11 +1,11 @@
-# Idéparkeringen – Världsingenjören
+# Idea backlog – World Engineer
 
-**Regel:** en ny idé kommer in i spelet bara om den gör kärnloopen roligare:
-**bygg → sköt om → klara en kris → förstå varför.**
-Allt annat parkeras här tills det vertikala snittet (scenariot *Nilen*) har testats av
-minst 3 personer. Då avgör testet vad som plockas fram.
+**Rule:** a new idea goes into the game only if it makes the core loop more fun:
+**build → maintain → survive a crisis → understand why.**
+Everything else is parked here until the vertical slice (the *Nile* scenario) has been
+tested by at least 3 people. The test results then decide what is taken off the shelf.
 
-## Parkerat
+## Parked
 
 ### Story (worldbuilding)
 - **The Habsburg–Qing family:** around 1900 an archduke marries a Qing princess. After both
@@ -17,83 +17,87 @@ minst 3 personer. Då avgör testet vad som plockas fram.
 - **Decade reports:** a historian sums up the family's legacy every ten years.
 
 ### Progression
-- **Fler scenarier:** introduktion med Harsprånget, Atlantropa, klimatkrisen.
-- **Kunskapsbank:** fylls i när man stöter på ett fenomen (ASR, kalcit, Messinska
-  salinitetskrisen, Clausius–Clapeyron).
-- **Prestationer kopplade till förståelse,** till exempel "stoppade inre erosion under 50 %".
-- **Teknikträd via milstolpar:** RCC-betong, fiskvägar, bättre turbiner.
+- **More scenarios:** a tutorial with Harsprånget, Atlantropa, the climate crisis.
+- **Knowledge base:** fills up as the player encounters phenomena (ASR, calcite, the
+  Messinian salinity crisis, Clausius–Clapeyron).
+- **Achievements tied to understanding,** for example "stopped internal erosion below 50%".
+- **Technology tree unlocked by milestones:** roller-compacted concrete (RCC), fish passes,
+  better turbines.
 
-### Minispel 3–7
-- Injektering av tätkärnan
-- Flodvågen (öppna luckor i rätt takt)
-- Turbinvalet (Pelton, Francis eller Kaplan)
-- Fångdammen
-- Bymötet
+### Mini-games 3–7
+- Grouting the dam core
+- The flood wave (opening the gates at the right pace)
+- Choosing the turbine (Pelton, Francis or Kaplan)
+- The cofferdam
+- The village meeting
 
-### Fas 2 och senare
-- **Klimat med återkoppling:** TCRE, havsnivå, Clausius–Clapeyron.
-- **Kuststäder:** vallar, reträtt eller "Venedig-läge".
-- **Dammbrottsvåg** genom kaskaden, skred (Vajont), jordbävningar utlösta av magasin.
-- **Komponenter för megaprojekten:** slussar, pumpar, saltavlagringar.
-- **Framtid och sci-fi:** innehållet bestäms senare.
+### Phase 2 and later
+- **Climate with feedback:** TCRE, sea level, Clausius–Clapeyron.
+- **Coastal cities:** dikes, retreat or "Venice mode".
+- **Dam-break wave** through the cascade, landslides (Vajont), reservoir-induced earthquakes.
+- **Components for the megaprojects:** locks, pumps, salt deposits.
+- **The future and science fiction:** content to be decided later.
 
-### Polering
-- **Påskägg:** en vit kanin som en hyllning till *Monty Python and the Holy Grail*, till
-  exempel bakom en sten i fångdammsminispelet.
-  - Egen ritad kanin, utan namn, repliker eller bilder från filmen (upphovsrätt).
-  - Tas upp först när spelet ska poleras.
-- **Porträtt och miljöbilder** via ett bild-API (beslut: inte nu, grafiken ritas i kod).
+### Polish
+- **Easter egg:** a white rabbit as a tribute to *Monty Python and the Holy Grail*, for
+  example hiding behind a rock in the cofferdam mini-game.
+  - An original drawing, with no names, lines or images from the film (copyright).
+  - Only considered once the game is being polished.
+- **Portraits and scenery** from an image-generation API (decision: not now; graphics are
+  drawn in code).
 
 ---
 
-## Publicering (undersökt 2026-11-19, inget är köpt eller publicerat)
+## Publishing (investigated 2026-11-19; nothing has been bought or published)
 
-Spelet är en Python-server (Dash). Spelarens tillstånd ligger i webbläsaren (`dcc.Store`), så
-flera spelare kan använda samma server samtidigt. Kontrollera aktuella priser innan beslut.
+The game is a Python server (Dash). Each player's state lives in the browser (`dcc.Store`),
+so several players can share one server. Check current prices before deciding.
 
-| Väg | Kostnad | För och emot |
+| Option | Cost | Pros and cons |
 |---|---|---|
-| **Hugging Face Spaces** (Docker) | gratis | Gott om minne. Somnar efter en tids inaktivitet. Bra för testspelare. |
-| **Render** (webbtjänst) | gratis nivå finns, annars några dollar/månad | Enkelt. Gratisnivån har lite minne och somnar. |
-| **Fly.io** | några dollar/månad | Snabbt och stabilt, men ingen gratisnivå längre. |
-| **Nedladdningsbar Windows-version** (PyInstaller) på itch.io | gratis | Ingen server. Ca 200 MB, kan ge varningar från antivirusprogram. |
+| **Hugging Face Spaces** (Docker) | free | Plenty of memory. Goes to sleep after a period of inactivity. Good for test players. |
+| **Render** (web service) | free tier, otherwise a few dollars/month | Simple. The free tier has little memory and goes to sleep. |
+| **Fly.io** | a few dollars/month | Fast and stable, but no free tier any more. |
+| **Downloadable Windows version** (PyInstaller) on itch.io | free | No server. About 200 MB, may trigger antivirus warnings. |
 
-**Rekommendation:** testa med **Hugging Face Spaces** (gratis) för testspelarna. Lägg en
-**itch.io-sida** som länkar dit när spelet ska visas för fler.
+**Recommendation:** use **Hugging Face Spaces** (free) for the test players. Add an
+**itch.io page** that links there when the game is ready for a wider audience.
 
-**Före publicering:**
-- Spara och ladda skriver i dag filer på servern (`sparade/`), vilket är delat mellan alla
-  spelare. Det måste bli nedladdning och uppladdning av sparfilen, eller webbläsarens lagring.
-- `data/raa/` (544 MB rådata) ska inte med, bara `floder.npz` och `etopo_*.npz` (ca 23 MB).
-- Kontrollera licenserna: HydroSHEDS/HydroRIVERS och ETOPO1 (NOAA) kräver
-  källhänvisning, som ska stå på en "Om spelet"-sida.
+**Before publishing:**
+- Save and load currently write files on the server (`sparade/`), which would be shared by
+  all players. This must become a download/upload of the save file, or browser storage.
+- The river network (`data/floder.npz`) must not be published as data on its own (HydroSHEDS
+  license), so a hosted version has to build it with `hamta_floder.py`. The raw data
+  (`data/raa/`, 544 MB) never goes into the repository.
+- The attribution required by HydroSHEDS and ETOPO1 is in `README.md` and in the game's
+  start screen ("Data sources").
 
 ---
 
-## Testprotokoll för det vertikala snittet
+## Test protocol for the vertical slice
 
-**Vem:** 3–5 personer som inte har sett spelet, gärna en som spelar strategispel och en som
-inte gör det.
+**Who:** 3–5 people who have not seen the game, ideally one who plays strategy games and one
+who does not.
 
-**Hur:**
-1. Starta `python spel_app.py` och låt personen själv välja *Nilen 2030–2055*.
-2. Säg bara: "Spela som du vill, tänk högt om du kan. Jag hjälper inte till."
-3. Sitt tyst och anteckna. Hjälp bara om personen helt fastnar i mer än 2 minuter (anteckna
-   det också).
-4. Avbryt efter 45 minuter eller när scenariot är slut.
+**How:**
+1. Start `python spel_app.py` and let the person choose *Nile 2030–2055* themselves.
+2. Say only: "Play however you like, and think aloud if you can. I won't help."
+3. Sit quietly and take notes. Only help if the person is completely stuck for more than
+   2 minutes (and note that too).
+4. Stop after 45 minutes or when the scenario ends.
 
-**Titta efter:**
-- Var fastnar personen? Vad försöker hen klicka på som inte går att klicka på?
-- När skrattar, stönar eller lutar hen sig fram? (Det är där spelet lever.)
-- När tappar hen intresset (tittar bort, klickar autospel länge utan att läsa)?
-- Läser hen introduktionen, eller hoppar hen över den?
-- Förstår hen varför betyget blev som det blev?
-- Provar hen minispelen? Frivilligt eller inte alls?
+**Watch for:**
+- Where does the person get stuck? What do they try to click that cannot be clicked?
+- When do they laugh, groan or lean forward? (That is where the game comes alive.)
+- When do they lose interest (look away, run Autoplay for a long time without reading)?
+- Do they read the introduction, or skip it?
+- Do they understand why they got the grade they got?
+- Do they try the mini-games? On their own initiative, or not at all?
 
-**Tre frågor efteråt:**
-1. Vad var roligast, och vad var tråkigast?
-2. Fanns det något du ville göra men inte kunde?
-3. Skulle du vilja spela igen för att få ett bättre betyg? Varför eller varför inte?
+**Three questions afterwards:**
+1. What was the most fun, and what was the most boring?
+2. Was there anything you wanted to do but couldn't?
+3. Would you play again to get a better grade? Why, or why not?
 
-**Efter testerna:** skriv ner de tre vanligaste problemen. Det är nästa steg, inte nya
-funktioner ur listan ovan.
+**After the tests:** write down the three most common problems. Those are the next step, not
+new features from the list above.
